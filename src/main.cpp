@@ -189,10 +189,10 @@ void reconnect()
     Serial.println(clientName);
 
     // Attempt to connect
-    // If you do not want to use a username and password, change next line to
+
     if (client.connect((char *)clientName.c_str()))
     {
-      // if (client.connect((char*) clientName.c_str()), mqtt_user, mqtt_password)) {
+
       Serial.println("connected");
       client.subscribe(ledTopic);
       client.subscribe(readDelayTimeTopic);
